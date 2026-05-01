@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -62,14 +63,16 @@ function Home() {
 }
 
   return (
+    
     <div className="flex flex-col justify-center text-white bg-zinc-950 mt-30">
+      <Link to="/projects" className="decoration-0  ">
       <motion.div
         variants={fadeIn}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className=" bg-[url(/images/Hero_1.png)] bg-center bg-cover brightness-70 text-center h-64 md:h-80 lg:h-96 font-bold flex flex-col justify-center items-center mt-10 md:mt-14 mb-10 md:mb-14 px-4"
+        className=" bg-[url(/images/Hero_1.png)] transition duration-300 ease-in-out hover:scale-95   bg-center bg-cover brightness-70 text-center h-64 md:h-80 lg:h-96 font-bold flex flex-col justify-center items-center mt-10 md:mt-14 mb-10 md:mb-14 px-4"
       >
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -80,7 +83,8 @@ function Home() {
         >
           FUTJA NGJYRË
         </motion.h1>
-      </motion.div>
+      </motion.div></Link>
+      
 
       <div className="flex flex-col justify-around p-6 md:p-12 lg:p-16 text-center font-bold text-xl md:text-2xl lg:text-3xl mt-10 md:mt-14 mb-10 md:mb-14 h-auto lg:h-150">
         <h1>SINCE 2015:</h1>
@@ -128,13 +132,14 @@ function Home() {
         </motion.div>
       </div>
 
+      <Link to="/about">
       <motion.div
         variants={fadeIn}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="bg-[url(/images/Hero_2.png)] bg-center bg-cover brightness-70 text-center h-64 md:h-80 lg:h-96 font-bold flex flex-col justify-center items-center mt-10 md:mt-14 mb-10 md:mb-14 px-4"
+        className="bg-[url(/images/Hero_2.png)] transition duration-300 ease-in-out hover:scale-95  bg-center bg-cover brightness-70 text-center h-64 md:h-80 lg:h-96 font-bold flex flex-col justify-center items-center mt-10 md:mt-14 mb-10 md:mb-14 px-4"
       >
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -156,7 +161,8 @@ function Home() {
           Futja Ngjyre operates from its dedicated creative space in the Fatime
           Xhaka area of Mitrovica.
         </motion.p>
-      </motion.div>
+      </motion.div></Link>
+      
 
       
     </div>
